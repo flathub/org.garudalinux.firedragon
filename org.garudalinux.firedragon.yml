@@ -64,16 +64,16 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://gitlab.com/api/v4/projects/55893651/packages/generic/firedragon/11.14.1-1/firedragon-v11.14.1-1.linux-x86_64.tar.bz2
-        sha256: 2cecfa371922b09be626fbde1c4bffb7809b763f0ef89652d99994ba0b74672f
+        url: https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v11.15.0-1/downloads/firedragon-v11.15.0-1.linux-x86_64.tar.bz2
+        sha256: cc3af38a68267771c251d65431111fd864ca61f6422fb24f172c4fa758a13e75
         strip-components: 0
       - type: file
         dest-filename: org.garudalinux.firedragon.desktop
         url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/4f1e4348e5ea07cd888fdb3ab54120dfca5ac3b2/firedragon.desktop
         sha256: 53d3e743f3750522318a786befa196237892c93f20571443fdf82a480e7f0560
       - type: file
-        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/e424f8dc3b84a4c8946e3000bbb1539f116ba36c/org.garudalinux.firedragon.metainfo.xml
-        sha256: cdc83919aa119fdc2b3c7acbd2040c1b034b0b993c2ceb3357f6b5d8cf9384e9
+        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/426079070dab0eaa1d2ddcfbba4f33b085a64455/org.garudalinux.firedragon.metainfo.xml
+        sha256: b001e7d1c177c51cc8ee0f38571d89910711d682be0b26cfef5d579cb99bfea6
       - type: file
         path: firedragon.sh
       - type: file
