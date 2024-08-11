@@ -72,8 +72,8 @@ modules:
           is-main-source: true
           type: json
           url: https://gitlab.com/api/v4/projects/55893651/releases/permalink/latest
-          version-query: .tag_name | sub("^v"; "")
-          url-query: '"https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v\($version)/downloads/firedragon-v\($version).linux-x86_64.tar.bz2"'
+          version-query: .tag_name
+          url-query: '"https://gitlab.com/garuda-linux/firedragon/builder/-/releases/\($version)/downloads/firedragon-\($version).linux-x86_64.tar.bz2"'
           timestamp-query: .released_at
       - type: file
         dest-filename: org.garudalinux.firedragon.desktop
