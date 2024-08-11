@@ -5,7 +5,9 @@
   <project_license>MPL-2.0 AND LicenseRef-proprietary=https://raw.githubusercontent.com/Floorp-Projects/Floorp-private-components/main/LICENSE</project_license>
   <name>FireDragon</name>
   <summary>Floorp fork build using custom branding &amp; settings</summary>
-  <developer_name>FireDragon Team</developer_name>
+  <developer id="org.garudalinux.firedragon">
+    <name>FireDragon Team</name>
+  </developer>
   <description>
     <p>FireDragon is a browser based on the excellent Floorp browser. It was customized to have dr460nized-fitting aestetics as well as many opiniated settings by default. As this browser was originally a Librewolf fork, we are trying to integrate its best patches and tweaks in the new base. The most important features in addition of Floorps own ones can be found below.</p>
     <ul>
