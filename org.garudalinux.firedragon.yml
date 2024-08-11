@@ -65,8 +65,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v11.15.0-1/downloads/firedragon-v11.15.0-1.linux-x86_64.tar.bz2
-        sha256: cc3af38a68267771c251d65431111fd864ca61f6422fb24f172c4fa758a13e75
+        url: https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v11.16.0-1/downloads/firedragon-v11.16.0-1.linux-x86_64.tar.bz2
+        sha256: e3f82613914115cc19931afdf75693ae0736d3e75d9feeffcafd67b20e8d1267
         strip-components: 0
         x-checker-data:
           type: json
@@ -75,16 +75,16 @@ modules:
           url-query: '"https://gitlab.com/garuda-linux/firedragon/builder/-/releases/\($version)/downloads/firedragon-\($version).linux-x86_64.tar.bz2"'
       - type: file
         dest-filename: org.garudalinux.firedragon.desktop
-        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/4f1e4348e5ea07cd888fdb3ab54120dfca5ac3b2/firedragon.desktop
-        sha256: 53d3e743f3750522318a786befa196237892c93f20571443fdf82a480e7f0560
+        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/fcd899e326e5e4af18589fd7270b8e6ac3a629f3/org.garudalinux.firedragon.metainfo.xml
+        sha256: 77ceb3118a17247e941571df853ceeed7abdb46e05ff8324bdd1d2115323dea8
         x-checker-data:
           type: json
           url: https://gitlab.com/api/v4/projects/24557372/repository/commits/master
           version-query: .id
           url-query: '"https://gitlab.com/garuda-linux/firedragon/settings/-/raw/\($version)/org.garudalinux.firedragon.metainfo.xml"'
       - type: file
-        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/426079070dab0eaa1d2ddcfbba4f33b085a64455/org.garudalinux.firedragon.metainfo.xml
-        sha256: b001e7d1c177c51cc8ee0f38571d89910711d682be0b26cfef5d579cb99bfea6
+        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/fcd899e326e5e4af18589fd7270b8e6ac3a629f3/org.garudalinux.firedragon.metainfo.xml
+        sha256: 77ceb3118a17247e941571df853ceeed7abdb46e05ff8324bdd1d2115323dea8
         x-checker-data:
           type: json
           url: https://gitlab.com/api/v4/projects/24557372/repository/commits/master
