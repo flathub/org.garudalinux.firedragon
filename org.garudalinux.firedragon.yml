@@ -77,7 +77,7 @@ modules:
           timestamp-query: .released_at
       - type: file
         dest-filename: org.garudalinux.firedragon.desktop
-        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/3bb9365e5b0d4918a6f9dd005a206a77aebbaa8f/firedragon.desktop
+        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/1aeba9b447dabb53bc601c4f659784a0dc6482a8/firedragon.desktop
         sha256: 53d3e743f3750522318a786befa196237892c93f20571443fdf82a480e7f0560
         x-checker-data:
           type: json
