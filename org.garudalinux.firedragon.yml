@@ -65,8 +65,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v11.16.0-1/downloads/firedragon-v11.16.0-1.linux-x86_64.tar.bz2
-        sha256: e3f82613914115cc19931afdf75693ae0736d3e75d9feeffcafd67b20e8d1267
+        url: https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v11.17.1-1/downloads/firedragon-v11.17.1-1.linux-x86_64.tar.bz2
+        sha256: 9475881e381523d33b68b041a43a5c2e9d5c5852687e50e7729c7ca030aa0ce5
         strip-components: 0
         x-checker-data:
           is-main-source: true
@@ -77,7 +77,7 @@ modules:
           timestamp-query: .released_at
       - type: file
         dest-filename: org.garudalinux.firedragon.desktop
-        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/fcd899e326e5e4af18589fd7270b8e6ac3a629f3/firedragon.desktop
+        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/3bb9365e5b0d4918a6f9dd005a206a77aebbaa8f/firedragon.desktop
         sha256: 53d3e743f3750522318a786befa196237892c93f20571443fdf82a480e7f0560
         x-checker-data:
           type: json
