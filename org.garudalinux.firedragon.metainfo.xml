@@ -53,8 +53,11 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="v11.17.4-2" date="2024-08-19">
+    <release version="v11.17.5-1" date="2024-08-21">
       <description></description>
+    </release>
+    <release version="v11.17.4-2" date="2024-08-19">
+      <description/>
     </release>
     <release version="v11.17.4-1" date="2024-08-18">
       <description/>
