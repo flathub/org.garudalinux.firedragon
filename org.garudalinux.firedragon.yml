@@ -64,8 +64,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v11.21.0-1/downloads/firedragon-v11.21.0-1.linux-x86_64.tar.zst
-        sha256: e16d2217449bec620b8c57d00696cd9d261c9749303ccf1a3746f885bca123cd
+        url: https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v11.22.0-1/downloads/firedragon-v11.22.0-1.linux-x86_64.tar.zst
+        sha256: f583b11d6d2cdedfaeec5d5acbad409920818051d28a7f17531a24737ddf1235
         strip-components: 0
         x-checker-data:
           is-main-source: true
