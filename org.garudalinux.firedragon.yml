@@ -64,8 +64,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v11.23.0-2/downloads/firedragon-v11.23.0-2.linux-x86_64.tar.zst
-        sha256: 7ad7b8b2daa36d010d7d26a30c5af72dd137a389c72a9bcf1838addd59c32e22
+        url: https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v11.23.0-4/downloads/firedragon-v11.23.0-4.linux-x86_64.tar.zst
+        sha256: b36df5cb9a3051cd33580fa9fc5834f3bcc74a85e794221a3035d87995ef9458
         strip-components: 0
         x-checker-data:
           is-main-source: true
