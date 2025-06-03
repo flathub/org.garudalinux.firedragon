@@ -55,6 +55,7 @@ modules:
     build-commands:
       - install -Dm644 org.garudalinux.firedragon.metainfo.xml -t /app/share/metainfo/
       - mv firedragon /app/lib/
+      - mkdir /app/lib/ffmpeg
       - install -Dm755 firedragon.sh /app/bin/firedragon
       - install -Dm644 -t /app/lib/firedragon/defaults/pref/ flatpak-prefs.js
       - sed -i 's#/usr/lib/firedragon/firedragon#/app/lib/firedragon/firedragon#' org.garudalinux.firedragon.desktop
