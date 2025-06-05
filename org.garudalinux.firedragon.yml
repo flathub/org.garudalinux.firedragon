@@ -37,14 +37,25 @@ finish-args:
   - --talk-name=org.gtk.vfs.*
   - --own-name=org.mpris.MediaPlayer2.firefox.*
   - --own-name=org.mozilla.firedragon.*
-cleanup-commands:
-  - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/pkgconfig
+  - /share/aclocal
+  - /share/gtk-doc
+  - /share/doc
+  - /share/info
+  - /man
+  - /share/man
+  - '*.la'
+  - '*.a'
 modules:
   - name: firedragon
     buildsystem: simple
     build-commands:
       - install -Dm644 org.garudalinux.firedragon.metainfo.xml -t /app/share/metainfo/
       - mv firedragon /app/lib/
+      - mkdir /app/lib/ffmpeg
       - install -Dm755 firedragon.sh /app/bin/firedragon
       - install -Dm644 -t /app/lib/firedragon/defaults/pref/ flatpak-prefs.js
       - sed -i 's#/usr/lib/firedragon/firedragon#/app/lib/firedragon/firedragon#' org.garudalinux.firedragon.desktop
@@ -55,7 +66,7 @@ modules:
           cp "/app/lib/firedragon/browser/chrome/icons/default/default${size}.png" "/app/share/icons/hicolor/${size}x${size}/apps/org.garudalinux.firedragon.png"
         done
       - >
-        export DISTRIBUTION_VERSION=$(cat org.garudalinux.firedragon.metainfo.xml | sed -r 's/\s*?<release\sversion="(v[0-9\.\-]*?)"\sdate="([0-9\-]*?)".*?>\s*?/\1_\2/gp;d' | head -1)
+        export DISTRIBUTION_VERSION=$(cat org.garudalinux.firedragon.metainfo.xml | sed -r 's/\s*?<release\sversion="(v[a-z0-9\.\-]*?)"\sdate="([0-9\-]*?)".*?>\s*?/\1_\2/gp;d' | head -1)
 
         echo $DISTRIBUTION_VERSION | grep -E "^v[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?_[0-9]{4}-[0-9]{2}-[0-9]{2}$" # validation
 
@@ -64,27 +75,45 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://gitlab.com/garuda-linux/firedragon/builder/-/releases/v11.27.0-1/downloads/firedragon-v11.27.0-1.linux-x86_64.tar.zst
-        sha256: 80b3e78a9e672a43dcb444bc9b759ca7db9e8c3c6507e234853e747694c7accf
+        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/v12.0.0-beta.2/downloads/firedragon-linux-x64.tar.zst
+        sha256: 6bad3bb0a12fdb56830edb444bd962a3619bf41db5380025bc75810b4a65aa53
         strip-components: 0
         x-checker-data:
           is-main-source: true
           type: json
-          url: https://gitlab.com/api/v4/projects/55893651/releases/permalink/latest
+          url: https://gitlab.com/api/v4/projects/69949446/releases/permalink/latest
           version-query: .tag_name
-          url-query: '"https://gitlab.com/garuda-linux/firedragon/builder/-/releases/\($version)/downloads/firedragon-\($version).linux-x86_64.tar.zst"'
-          timestamp-query: .released_at
+          url-query: '"https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/\($version)/downloads/firedragon-linux-x64.tar.zst"'
+      - type: archive
+        only-arches:
+          - aarch64
+        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/v12.0.0-beta.2/downloads/firedragon-linux-arm64.tar.zst
+        sha256: 19d83b5fdce5efd451d00cfdd4f6cdeebd51d8fd3365523a2d8f3f9e7f522177
+        strip-components: 0
+        x-checker-data:
+          is-main-source: true
+          type: json
+          url: https://gitlab.com/api/v4/projects/69949446/releases/permalink/latest
+          version-query: .tag_name
+          url-query: '"https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/\($version)/downloads/firedragon-linux-arm64.tar.zst"'
       - type: file
         dest-filename: org.garudalinux.firedragon.desktop
-        url: https://gitlab.com/garuda-linux/firedragon/settings/-/raw/4f1e4348e5ea07cd888fdb3ab54120dfca5ac3b2/firedragon.desktop
+        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/raw/v12.0.0-beta.2/assets/firedragon.desktop
         sha256: 53d3e743f3750522318a786befa196237892c93f20571443fdf82a480e7f0560
         x-checker-data:
           type: json
-          url: https://gitlab.com/api/v4/projects/24557372/repository/files/firedragon.desktop?ref=master
-          version-query: .last_commit_id
-          url-query: '"https://gitlab.com/garuda-linux/firedragon/settings/-/raw/\($version)/firedragon.desktop"'
+          url: https://gitlab.com/api/v4/projects/69949446/releases/permalink/latest
+          version-query: .tag_name
+          url-query: '"https://gitlab.com/garuda-linux/firedragon/firedragon12/-/raw/\($version)/assets/firedragon.desktop"'
       - type: file
-        path: org.garudalinux.firedragon.metainfo.xml
+        dest-filename: org.garudalinux.firedragon.metainfo.xml
+        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/raw/v12.0.0-beta.2/assets/org.garudalinux.firedragon.metainfo.xml
+        sha256: 60ffc760684c2b1da343860d95aaf3fcddd9b67f0d1c06c0d983a1e85060afc2
+        x-checker-data:
+          type: json
+          url: https://gitlab.com/api/v4/projects/69949446/releases/permalink/latest
+          version-query: .tag_name
+          url-query: '"https://gitlab.com/garuda-linux/firedragon/firedragon12/-/raw/\($version)/assets/org.garudalinux.firedragon.metainfo.xml"'
       - type: file
         path: firedragon.sh
       - type: file
