@@ -83,7 +83,7 @@ modules:
           type: json
           url: https://gitlab.com/api/v4/projects/69949446/releases/permalink/latest
           version-query: .tag_name
-          url-query: '"https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/\($version)/downloads/firedragon-linux-x64.tar.zst"'
+          url-query: '"https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/\($version)/downloads/firedragon-linux-x64.tar.xz"'
       - type: archive
         only-arches:
           - aarch64
@@ -95,7 +95,7 @@ modules:
           type: json
           url: https://gitlab.com/api/v4/projects/69949446/releases/permalink/latest
           version-query: .tag_name
-          url-query: '"https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/\($version)/downloads/firedragon-linux-arm64.tar.zst"'
+          url-query: '"https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/\($version)/downloads/firedragon-linux-arm64.tar.xz"'
       - type: file
         dest-filename: org.garudalinux.firedragon.desktop
         url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/raw/v12.0.0-beta.2/assets/firedragon.desktop
