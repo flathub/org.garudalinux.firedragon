@@ -1,3 +1,4 @@
 {
-  "only-arches": ["x86_64", "aarch64"]
+    "only-arches": ["x86_64", "aarch64"],
+    "end-of-life": "The beta branch of FireDragon Flatpak is EOL since v12 is now stable. Please switch to the stable repository for FireDragon to get latest update."
 }
