@@ -2,7 +2,7 @@
 
 Flathub: https://flathub.org/apps/org.garudalinux.firedragon
 
-Browser source code: https://gitlab.com/garuda-linux/firedragon/builder
+Browser source code: https://gitlab.com/garuda-linux/firedragon/firedragon12
 
 ### Based on
 
