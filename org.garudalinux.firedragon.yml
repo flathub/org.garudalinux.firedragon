@@ -71,8 +71,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/v12.1.2/downloads/firedragon-linux-x64.tar.xz
-        sha256: 17bd629172084d2a68b4cd84954d9288a5541a6f0964925641406b0541872abf
+        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/v12.2.0/downloads/firedragon-linux-x64.tar.xz
+        sha256: ac9102894110b62774265704c3fefbe4e7c03f7befe129ae6211220546512904
         strip-components: 0
         x-checker-data:
           is-main-source: true
@@ -83,8 +83,8 @@ modules:
       - type: archive
         only-arches:
           - aarch64
-        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/v12.1.2/downloads/firedragon-linux-arm64.tar.xz
-        sha256: be41d4cbc5660b459e304cc1eb5b5e25b45cf2761df9ac310b36e82e7f042d89
+        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/v12.2.0/downloads/firedragon-linux-arm64.tar.xz
+        sha256: 3a9afde58b9e140aa4e735a633d770ab8044e48d0cdc15b4d57b7cbb667e995c
         strip-components: 0
         x-checker-data:
           is-main-source: true
@@ -94,7 +94,7 @@ modules:
           url-query: '"https://gitlab.com/garuda-linux/firedragon/firedragon12/-/releases/\($version)/downloads/firedragon-linux-arm64.tar.xz"'
       - type: file
         dest-filename: org.garudalinux.firedragon.desktop
-        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/raw/v12.1.2/assets/firedragon.desktop
+        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/raw/v12.2.0/assets/firedragon.desktop
         sha256: 53d3e743f3750522318a786befa196237892c93f20571443fdf82a480e7f0560
         x-checker-data:
           type: json
@@ -103,8 +103,8 @@ modules:
           url-query: '"https://gitlab.com/garuda-linux/firedragon/firedragon12/-/raw/\($version)/assets/firedragon.desktop"'
       - type: file
         dest-filename: org.garudalinux.firedragon.metainfo.xml
-        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/raw/v12.1.2/assets/org.garudalinux.firedragon.metainfo.xml
-        sha256: 25dd12a895d29ee5947392ebe74832076133e1223b4720133377e8854e27feaf
+        url: https://gitlab.com/garuda-linux/firedragon/firedragon12/-/raw/v12.2.0/assets/org.garudalinux.firedragon.metainfo.xml
+        sha256: 75fbb126b648a461c840948aa1b9a23daec29dc43d70b98dbab6b220731ce961
         x-checker-data:
           type: json
           url: https://gitlab.com/api/v4/projects/69949446/releases/permalink/latest
