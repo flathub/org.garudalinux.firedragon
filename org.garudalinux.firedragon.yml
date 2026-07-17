@@ -28,7 +28,6 @@ finish-args:
   - --talk-name=org.gtk.vfs.*
   - --own-name=org.mpris.MediaPlayer2.firefox.*
   - --own-name=org.mozilla.firedragon.*
-  - --own-name=org.garudalinux.firedragon.*
 modules:
   - name: firedragon
     buildsystem: simple
