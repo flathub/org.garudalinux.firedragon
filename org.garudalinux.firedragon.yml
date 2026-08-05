@@ -38,8 +38,8 @@ modules:
       - tar -xf firedragon.linux-x64.tar.xz -C /app/lib
     sources:
       - type: file
-        url: https://gitlab.com/garuda-linux/firedragon/firedragon13/-/releases/v13.1.0/downloads/firedragon.linux-x64.tar.xz
-        sha256: bf731923434930fd3428b13236a29d3caf6e2ffe24409d598290449ae3fb7881
+        url: https://gitlab.com/garuda-linux/firedragon/firedragon13/-/releases/v13.1.1/downloads/firedragon.linux-x64.tar.xz
+        sha256: 532c0a17af09c3f76788ca599c41f35cf03397856de6e7836e55e298c13a842e
         x-checker-data:
           is-main-source: true
           type: json
@@ -55,8 +55,8 @@ modules:
       - tar -xf firedragon.linux-arm64.tar.xz -C /app/lib
     sources:
       - type: file
-        url: https://gitlab.com/garuda-linux/firedragon/firedragon13/-/releases/v13.1.0/downloads/firedragon.linux-arm64.tar.xz
-        sha256: bce9638e46dfa8ad6735f3b4f3fc0b082ef739ff82b88ce9794aeea838ca1170
+        url: https://gitlab.com/garuda-linux/firedragon/firedragon13/-/releases/v13.1.1/downloads/firedragon.linux-arm64.tar.xz
+        sha256: b85511caf6b05b00029e4b50b5ca9f7b5f08ff99981de087548d32f057f2d755
         x-checker-data:
           is-main-source: true
           type: json
@@ -79,8 +79,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/garuda-linux/firedragon/firedragon13.git
-        tag: v13.1.0
-        commit: 8062939cdae646796d9498a934011d44d2039bac
+        tag: v13.1.1
+        commit: dc3a92857f3bf16ff5709c37afb9f215b04c59be
         disable_submodules: true
         x-checker-data:
           is-main-source: true
