@@ -1,0 +1,23 @@
+#+title: org.garudalinux.firedragon
+
+Flathub: https://flathub.org/apps/org.garudalinux.firedragon
+
+Browser source code: https://gitlab.com/garuda-linux/firedragon/firedragon13
+
+* How to install (from Flathub)
+
+#+begin_src sh
+flatpak install flathub org.garudalinux.firedragon
+#+end_src
+
+* How to build
+
+#+begin_src sh
+flatpak-builder build org.garudalinux.firedragon.yml
+#+end_src
+
+To test:
+
+#+begin_src sh
+flatpak-builder --run build org.garudalinux.firedragon.yml firedragon
+#+end_src
